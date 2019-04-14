@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SurveyComponent implements OnInit {
 
   constructor() { 
-    console.log(this.surveyData[2]);
+    //console.log(this.surveyData[2]);
+
+    var randomItem = this.surveyData[Math.floor(Math.random() * this.surveyData.length)];
+
+    console.log(randomItem);
   }
 
   ngOnInit() {
@@ -92,7 +96,5 @@ export class SurveyComponent implements OnInit {
   gender = this.surveyData[1].gender;
   favoriteFruit = this.surveyData[1].favoriteFruit;
   favoriteColor = this.surveyData[1].favoriteColor;
-
-
 
 }
