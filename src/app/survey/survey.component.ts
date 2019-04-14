@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurveyComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log(this.surveyData[2]);
+  }
 
   ngOnInit() {
   }
@@ -79,12 +81,18 @@ export class SurveyComponent implements OnInit {
   
   genders = ["male", "female", "other"];
   
-  id = Math.floor(Math.random() * 6) + 1;
-  index = 1;
-  name = "Himesh";
-  age = Math.floor(Math.random() * 60) + 18;
-  gender = this.genders[Math.floor(Math.random() * this.genders.length)];
-  favoriteFruit = this.fruits[Math.floor(Math.random() * this.fruits.length)];
-  favoriteColor = this.colors[Math.floor(Math.random() * this.colors.length)];
+  id = this.surveyData[1].id;
+  index = this.surveyData[1].index;
+  name = this.surveyData[1].name;
+  // age = Math.floor(Math.random() * 60) + 18;
+  // gender = this.genders[Math.floor(Math.random() * this.genders.length)];
+  // favoriteFruit = this.fruits[Math.floor(Math.random() * this.fruits.length)];
+  // favoriteColor = this.colors[Math.floor(Math.random() * this.colors.length)];
+  age = this.surveyData[1].age;
+  gender = this.surveyData[1].gender;
+  favoriteFruit = this.surveyData[1].favoriteFruit;
+  favoriteColor = this.surveyData[1].favoriteColor;
+
+
 
 }
