@@ -11,8 +11,20 @@ export class SurveyComponent implements OnInit {
     //console.log(this.surveyData[2]);
 
     var randomItem = this.surveyData[Math.floor(Math.random() * this.surveyData.length)];
+    var i, x = " ";
+    // for (i = 0; i < this.surveyData.length; i++) {
+    //   x += this.surveyData[i].name + " ";
+    // }
+    // for (i = 0; i < this.surveyData.length; i++) {
+    //   x += this.surveyData[i] + " ";
+    // }
 
-    console.log(randomItem);
+    var a;
+    for (a in this.surveyData) {
+      console.log(this.surveyData[a]);
+    }
+    //console.log(x);
+    //console.log(randomItem);
   }
 
   ngOnInit() {
